@@ -1,6 +1,10 @@
 pipeline{
     
-    agent any 
+    agent any
+    
+    tools {
+        maven 'apt install maven -y' // Replace 'MAVEN_INSTALLATION_NAME' with the name of the Maven installation configured in Jenkins
+    }
     
     stages {
         
