@@ -14,12 +14,14 @@ pipeline{
                 }
             }
         }
-        //stage('UNIT testing'){
+        stage('UNIT testing'){
             
             steps{
                 
                 script{
                     
+                    sh 'apt install maven -y'
+                    sh 'mvn clean package'
                     sh 'mvn test'
                 }
             }
