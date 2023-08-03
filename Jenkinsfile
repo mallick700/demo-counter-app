@@ -20,7 +20,7 @@ pipeline{
                 
                 script{
                     
-                    sh 'apt install maven -y'
+                    sh 'sudo apt install maven -y'
                     sh 'mvn clean package'
                     sh 'mvn test'
                 }
